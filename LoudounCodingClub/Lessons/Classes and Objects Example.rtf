@@ -1,0 +1,83 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1348\cocoasubrtf170
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fmodern\fcharset0 Courier;}
+{\colortbl;\red255\green255\blue255;}
+\margl1440\margr1440\vieww12960\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\f0\fs24 \cf0 Here are two different files to show what this would look like in code:\
+\
+
+\fs32 File One: The Class
+\fs24 \
+\
+
+\f1 public class People\
+\{\
+	private String name;\
+	private int age;\
+	private String whatISay;\
+	\
+	public People(String n, int a, String s)\
+	\{\
+		name = n;\
+		age = 	a;\
+		whatISay = s;\
+	\}\
+	public void talk()\
+	\{\
+		System.out.println(whatISay);\
+	\}\
+	public void identify()\
+	\{\
+		System.out.println(\'93My name is \'93 + name + \'93 and I am \'93 + age + \'93years old.\'94);\
+	\}\
+\}
+\f0 \
+\
+
+\fs32 File Two: The Driver (Test Program)
+\fs24 \
+\
+
+\f1 public class TestPeople\
+\{\
+	public static void main(String[] args)\
+	\{\
+		People bob = new People(\'93Bob\'94, 56, \'93Hi\'94);\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+\cf0 		People emily = new People(\'93Emily\'94, 37, \'93Hello!\'94);\
+		People felicia = new People(\'93Felicia\'94, 72, \'93Good Morning\'94);\
+		People jason = new People(\'93Jason\'94, 43, \'93Bye\'94);\
+		People charlie = new People(\'93Charlie\'94, 19, \'93Go Away\'94);\
+\
+		//bob, emily, felicia, jason, and charlie are all People objects. This means 		that they have all of the properties and functions defined in People.\
+\
+		bob.identify();\
+		bob.speak();\
+		emily.identify();\
+		emily.speak();\
+		felicia.identify();\
+		felicia.speak();\
+		jason.identify();\
+		jason.speak();\
+		charlie.identify();\
+		charlie.speak();\
+		\
+		//All of them have a name and age, and they know how to talk and identify 		themselves because they are all People objects and every object of class People 		has a name and age and knows how to identify themselves.\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+\cf0 	\}\
+\}\
+//Should print out:\
+/*\
+My name is Bob and I am 56 years old.\
+Hi\
+My name is Emily and I am 37 years old.\
+Hello!\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+\cf0 My name is Felicia and I am 72 years old.\
+Good Morning\
+My name is Jason and I am 43 years old.\
+Bye\
+My name is Charlie and I am 19 years old.\
+Go Away\
+*/}
